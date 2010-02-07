@@ -1,0 +1,14 @@
+Source: bubba-diskmanager
+Section: utils
+Priority: extra
+Maintainer: Tor Krill <tor@excito.com>
+Uploaders: Carl Fürstenberg <carl@excito.com>
+Build-Depends: cdbs, debhelper (>= 6), libeutils-dev, libsigc++-2.0-dev, libglib2.0-dev, pkg-config, libparted-dev
+Standards-Version: 3.8.0
+
+Package: bubba-diskmanager
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Bubba diskmanager
+ A wrapper for various system management commands for querying
+ and modifying underlying disk structures.
