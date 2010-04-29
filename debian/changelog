@@ -1,3 +1,9 @@
+bubba-diskmanager (0.0.37) claire; urgency=low
+
+  * change libparted deps 
+
+ -- Carl Fürstenberg <carl@excito.com>  Wed, 21 Apr 2010 13:42:14 +0200
+
 bubba-diskmanager (0.0.36) claire estelle; urgency=low
 
   * run tune2fs after format 
