@@ -3,9 +3,15 @@ Section: utils
 Priority: extra
 Maintainer: Tor Krill <tor@excito.com>
 Uploaders: Carl Fürstenberg <carl@excito.com>
-Build-Depends: cdbs, debhelper (>= 6), libeutils-dev, libsigc++-2.0-dev, libglib2.0-dev, pkg-config, libparted1.8-dev
+Build-Depends:
+ debhelper (>= 7.2), 
+ libeutils-dev,
+ libsigc++-2.0-dev, 
+ libglib2.0-dev, 
+ pkg-config, 
+ libparted0-dev (>= 2.2)
 Build-Conflicts: libparted1.7-dev
-Standards-Version: 3.8.0
+Standards-Version: 3.8.4
 
 Package: bubba-diskmanager
 Architecture: any

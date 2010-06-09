@@ -1,3 +1,12 @@
+bubba-diskmanager (0.0.38) vincent; urgency=low
+
+  * B3
+  * new source format
+  * drop cdbs
+  * use new parted
+
+ -- Carl Fürstenberg <carl@excito.com>  Wed, 09 Jun 2010 18:24:39 +0200
+
 bubba-diskmanager (0.0.37) claire; urgency=low
 
   * change libparted deps 

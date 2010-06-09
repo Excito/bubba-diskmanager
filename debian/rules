@@ -1,13 +1,29 @@
 #!/usr/bin/make -f
-  
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/makefile.mk
-include /usr/share/cdbs/1/rules/utils.mk
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
 
-# Add here any variable or target overrides you need.
+%:
+	dh  $@
 
-DEB_MAKE_CLEAN_TARGET   = clean
-DEB_MAKE_BUILD_TARGET   = all
-
-install/bubba-diskmanager::
+override_dh_install:
+	dh_install
 	install --mode 0700 diskmanager debian/bubba-diskmanager/usr/sbin
+
+
+# Use override_dh_* targets to customize this.
+# ---------------------------------------------------
+# Followings are the old debian/rules
+#
+# #!/usr/bin/make -f
+#   
+# include /usr/share/cdbs/1/rules/debhelper.mk
+# include /usr/share/cdbs/1/class/makefile.mk
+# include /usr/share/cdbs/1/rules/utils.mk
+# 
+# # Add here any variable or target overrides you need.
+# 
+# DEB_MAKE_CLEAN_TARGET   = clean
+# DEB_MAKE_BUILD_TARGET   = all
+# 
+# install/bubba-diskmanager::
+# 	install --mode 0700 diskmanager debian/bubba-diskmanager/usr/sbin
