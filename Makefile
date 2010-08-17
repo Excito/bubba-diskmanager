@@ -4,17 +4,19 @@
 # work out which udev we have. 
 
 DEBV=$(shell cat /etc/debian_version)
+LDFLAGS_EXTRA=
 ifeq ($(DEBV),4.0)
 	UDEVPRG=-DUSE_OLD_UDEV
 else
 	UDEVPRG=
+	LDFLAGS_EXTRA+=-ludev
 endif
 
 APP=diskmanager
 APP_SRC=parse.cpp Disks.cpp RaidDevs.cpp LVM.cpp DiskUtils.cpp CmdApp.cpp StatusNotifier.cpp Utils.cpp $(CMD_SRC)
 CMD_SRC=FsTabCmd.cpp CmdDevs.cpp UserUmount.cpp UserMount.cpp CmdMD.cpp CmdLV.cpp DiskCmd.cpp
 CXXFLAGS_EXTRA = -g -Wall -Wextra -Wold-style-cast -Woverloaded-virtual -Wsign-promo $(UDEVPRG)  $(shell pkg-config --cflags libeutils)
-LDFLAGS_EXTRA = $(shell pkg-config --libs libeutils) -lparted
+LDFLAGS_EXTRA+= $(shell pkg-config --libs libeutils) -lparted
 
 OBJS=$(APP_SRC:%.cpp=%.o)
 DEPDIR = .deps

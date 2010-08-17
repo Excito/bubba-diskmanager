@@ -1,3 +1,9 @@
+bubba-diskmanager (0.0.39) vincent; urgency=low
+
+  * Added libudev based metadata extraction
+
+ -- Tor Krill <tor@excito.com>  Tue, 17 Aug 2010 17:37:29 +0200
+
 bubba-diskmanager (0.0.38) vincent; urgency=low
 
   * B3

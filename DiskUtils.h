@@ -28,8 +28,12 @@ private:
 	Hash uuids;
 	Hash ruuids;
 	Hash labels;
+#ifdef USE_OLD_UDEV
 	void get_uuid();
 	void get_labels();
+#else
+	void init_data();
+#endif
 };
 
 #endif

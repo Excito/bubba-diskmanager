@@ -9,7 +9,8 @@ Build-Depends:
  libsigc++-2.0-dev, 
  libglib2.0-dev, 
  pkg-config, 
- libparted0-dev (>= 2.2)
+ libparted0-dev (>= 2.2),
+ libudev-dev
 Build-Conflicts: libparted1.7-dev
 Standards-Version: 3.8.4
 
