@@ -1,3 +1,9 @@
+bubba-diskmanager (0.0.41) vincent hugo; urgency=low
+
+  * Reorder arguments to mdadm to make 0.40 really work 
+
+ -- Tor Krill <tor@excito.com>  Tue, 26 Oct 2010 16:36:25 +0200
+
 bubba-diskmanager (0.0.40) vincent hugo; urgency=low
 
   * Force v 0.90 superblocks on md creation 
