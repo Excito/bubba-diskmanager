@@ -1,3 +1,9 @@
+bubba-diskmanager (0.0.40) vincent hugo; urgency=low
+
+  * Force v 0.90 superblocks on md creation 
+
+ -- Tor Krill <tor@excito.com>  Tue, 26 Oct 2010 14:29:12 +0200
+
 bubba-diskmanager (0.0.39) vincent; urgency=low
 
   * Added libudev based metadata extraction

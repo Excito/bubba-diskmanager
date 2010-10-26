@@ -165,6 +165,8 @@ bool RaidDevs::CreateMD(RaidDevs::types type,int ndisks, int spares, list<string
 	{
 		vector<const char*> cmd;
 		cmd.push_back( MDADM );
+		cmd.push_back( "-e" );
+		cmd.push_back( "0.90" );
 		cmd.push_back( "--create" );
 		cmd.push_back( "--run" );
 		cmd.push_back( "--force" );
