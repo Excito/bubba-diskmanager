@@ -72,7 +72,7 @@ bool DiskCmd::do_extend(Args& arg){
 
 	if(rval){
 		try{
-			if(!S_ISBLK(EUtils::Stat::Stat(arg[0]).GetMode())){
+			if(!S_ISBLK(EUtils::Stat(arg[0]).GetMode())){
 				ret["errmsg"]="Not a blockdevice";
 				rval=false;
 			}
@@ -119,7 +119,7 @@ bool DiskCmd::do_format(Args& arg){
 	}
 
 	try{
-		if(!S_ISBLK(EUtils::Stat::Stat(arg[0]).GetMode())){
+		if(!S_ISBLK(EUtils::Stat(arg[0]).GetMode())){
 			ret["errmsg"]="Not a blockdevice";
 			rval=false;
 		}
@@ -164,7 +164,7 @@ bool DiskCmd::do_partition(Args& arg){
 	}
 
 	try{
-		if(!S_ISBLK(EUtils::Stat::Stat(arg[0]).GetMode())){
+		if(!S_ISBLK(EUtils::Stat(arg[0]).GetMode())){
 			ret["errmsg"]="Not a blockdevice";
 			rval=false;
 		}
@@ -226,7 +226,7 @@ bool DiskCmd::do_set_partition_type(Args& arg){
 		partition = t_part.substr( length - 1 , 1 );
 
 		try{
-			if(!S_ISBLK(EUtils::Stat::Stat(arg[0]).GetMode())){
+			if(!S_ISBLK(EUtils::Stat(arg[0]).GetMode())){
 				ret["errmsg"]="Not a blockdevice";
 				rval=false;
 			}

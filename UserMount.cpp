@@ -21,7 +21,7 @@ bool UserMount::operator()(Args& arg){
 		return false;
 	}
 
-	if(!S_ISBLK(EUtils::Stat::Stat(arg[0]).GetMode())){
+	if(!S_ISBLK(EUtils::Stat(arg[0]).GetMode())){
 		return false;
 	}
 

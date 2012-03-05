@@ -92,7 +92,7 @@ bool FsTabCmd::do_add(Args& arg){
 
 	if(rval){
 		try{
-			if(!S_ISBLK(EUtils::Stat::Stat(arg[0]).GetMode())){
+			if(!S_ISBLK(EUtils::Stat(arg[0]).GetMode())){
 				ret["errmsg"]=arg[0]+" doesnt exist or is no block device";
 				rval=false;
 			}
@@ -149,7 +149,7 @@ bool FsTabCmd::do_add_by_uuid(Args& arg){
 
 	if(rval){
 		try{
-			if(!S_ISBLK(EUtils::Stat::Stat(arg[0]).GetMode())){
+			if(!S_ISBLK(EUtils::Stat(arg[0]).GetMode())){
 				ret["errmsg"]=arg[0]+" doesnt exist or is no block device";
 				rval=false;
 			}

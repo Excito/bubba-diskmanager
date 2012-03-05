@@ -87,7 +87,7 @@ bool CmdLV::do_pvcreate(Args& arg){
 
 	if(rval){
 		try{
-			if(!S_ISBLK(EUtils::Stat::Stat(arg[0]).GetMode())){
+			if(!S_ISBLK(EUtils::Stat(arg[0]).GetMode())){
 				ret["errmsg"]="Not a blockdevice";
 				rval=false;
 			}
@@ -121,7 +121,7 @@ bool CmdLV::do_pvremove(Args& arg){
 
 	if(rval){
 		try{
-			if(!S_ISBLK(EUtils::Stat::Stat(arg[0]).GetMode())){
+			if(!S_ISBLK(EUtils::Stat(arg[0]).GetMode())){
 				ret["errmsg"]="Not a blockdevice";
 				rval=false;
 			}
@@ -207,7 +207,7 @@ bool CmdLV::do_vgextend(Args& arg){
 	if(rval){
 		if(rval){
 			try{
-				if(!S_ISBLK(EUtils::Stat::Stat(arg[1]).GetMode())){
+				if(!S_ISBLK(EUtils::Stat(arg[1]).GetMode())){
 					ret["errmsg"]="Not a blockdevice";
 					rval=false;
 				}
