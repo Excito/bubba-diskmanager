@@ -1,3 +1,10 @@
+bubba-diskmanager (1.0) vincent hugo; urgency=low
+
+  * Update with parted 3.1
+  * Bump version number to something sane
+
+ -- Carl Fürstenberg <carl@excito.com>  Tue, 06 Mar 2012 15:15:31 +0300
+
 bubba-diskmanager (0.0.41) vincent hugo; urgency=low
 
   * Reorder arguments to mdadm to make 0.40 really work 
